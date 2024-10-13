@@ -259,3 +259,150 @@ int main()
     return 0;
 }
 ```
+
+### Task-02
+
+![Task-02](assets/images/Lab_02/Task_02.png)
+2. _Create a header file called matrix_multuply.h that takes two arrays as input and multiplies them and outputs a multiplied array._
+#### Solution
+##### matrix_multiply.h
+```CPP
+#ifndef MATRIX_MULTIPLY_H
+#define MATRIX_MULTIPLY_H
+
+using namespace std;
+
+// prototype of the matrixMultiplication method!
+// check module.cpp for definition.
+
+void matrixMultiplication(int **matrixOne, int **matrixTwo, int **resultantMatrix, int rowsOne, int columnsOne, int rowsTwo, int columnsTwo);
+
+#endif 
+```
+
+##### module.cpp
+```CPP
+#include <iostream>
+#include "matrix_multiply.h"
+using namespace std;
+
+// definition of the declared method in matrix_multiply.h
+void matrixMultiplication(int **matrixOne, int **matrixTwo, int **resultantMatrix, int rowsOne, int columnsOne, int rowsTwo, int columnsTwo)
+{
+
+    for (int i = 0; i < rowsOne; i++)
+    {
+        for (int j = 0; j < columnsTwo; j++)
+        {
+            for (int k = 0; k < columnsOne; k++)
+            {
+                resultantMatrix[i][j] = (resultantMatrix[i][j] + (matrixOne[i][k] * matrixTwo[k][j]));
+            }
+        }
+    }
+}
+```
+
+##### main.cpp
+```CPP
+#include <iostream>
+#include "module.cpp"
+using namespace std;
+
+int main()
+{
+    int rowsOne, columnsOne, rowsTwo, columnsTwo;
+
+    cout << "Enter the number of rows of the first matrix: ";
+    cin >> rowsOne;
+
+    cout << "Enter the number of columns of the first matrix: ";
+    cin >> columnsOne;
+
+    cout << "Enter the number of rows of the second matrix: ";
+    cin >> rowsTwo;
+
+    cout << "Enter the number of columns of the second matrix: ";
+    cin >> columnsTwo;
+
+    if (columnsOne != rowsTwo)
+    {
+        cout << "\nMatrix multiplication not possible.\nProgram Terminated......!\n";
+        return 0;
+    }
+
+    int **matrixOne = new int *[rowsOne];
+    for (int i = 0; i < rowsOne; i++)
+    {
+        matrixOne[i] = new int[columnsOne];
+    }
+
+    int **matrixTwo = new int *[rowsTwo];
+    for (int i = 0; i < rowsTwo; i++)
+    {
+        matrixTwo[i] = new int[columnsTwo];
+    }
+
+    int **resultantMatrix = new int *[rowsOne];
+    for (int i = 0; i < rowsOne; i++)
+    {
+        resultantMatrix[i] = new int[columnsTwo];
+    }
+
+    cout << endl;
+    cout << "Enter the elements of the first matrix:" << endl;
+    for (int i = 0; i < rowsOne; i++)
+    {
+        for (int j = 0; j < columnsOne; j++)
+        {
+            cout << "Enter element [" << i + 1 << "][" << j + 1 << "]: ";
+            cin >> matrixOne[i][j];
+        }
+    }
+
+    cout << endl;
+    cout << "Enter the elements of the second matrix:" << endl;
+    for (int i = 0; i < rowsTwo; i++)
+    {
+        for (int j = 0; j < columnsTwo; j++)
+        {
+            cout << "Enter element [" << i + 1 << "][" << j + 1 << "]: ";
+            cin >> matrixTwo[i][j];
+        }
+    }
+
+    matrixMultiplication(matrixOne, matrixTwo, resultantMatrix, rowsOne, columnsOne, rowsTwo, columnsTwo);
+
+    cout<<"-----------------------------"<<endl;
+    cout << "Resultant Matrix:" << endl;
+    for (int i = 0; i < rowsOne; i++)
+    {
+        for (int j = 0; j < columnsTwo; j++)
+        {
+            cout << resultantMatrix[i][j] << "\t";
+        }
+        cout << endl;
+    }
+    cout<<"--------------------"<<endl;
+
+    for (int i = 0; i < rowsOne; i++)
+    {
+        delete[] matrixOne[i];
+    }
+    delete[] matrixOne;
+
+    for (int i = 0; i < rowsTwo; i++)
+    {
+        delete[] matrixTwo[i];
+    }
+    delete[] matrixTwo;
+
+    for (int i = 0; i < rowsOne; i++)
+    {
+        delete[] resultantMatrix[i];
+    }
+    delete[] resultantMatrix;
+
+    return 0;
+}
+```
