@@ -1566,7 +1566,7 @@ int main()
 
 ## _Lab-04 (Algorithms)_
 
-### Elementry Sorting Algorithms
+### Task-01
 
 ![Task-01](assets/images/Lab_04/Lab_04(a)/Task_01.png)
 
