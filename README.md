@@ -1,6 +1,6 @@
 # Data Structures Lab Tasks.
 
-_This repository contains the solution sets of all the assignments of Data Structures Course in my 3rd Semester._
+_This repository contains the solution sets of all the assignments of __Data Structures Course__ in my 3rd Semester._
 
 ## _Lab-01 (Revision of OOP concepts covered in last semester i.e. 2nd Semester)_
 
@@ -16,5 +16,6 @@ _This repository contains the solution sets of all the assignments of Data Struc
   - Navigate to Directory: [Click here to view tasks directory](./Lab_03/Lab_03(a)/)
 - ### Lab_03(b) - Doubly Linked List
     - Navigate to Directory: [Click here to view tasks directory](./Lab_03/Lab_03(b)/)
-## _Lab-04 (Algorithms)_
-- Navigate to Directory: [Click here to view tasks directory](./Lab_04/Lab_04(a)/)
+## _Lab-04 (Algorithms)_ 
+- ### Lab_04(a) - Sorting Algorithms
+  - Navigate to Directory: [Click here to view tasks directory](./Lab_04/Lab_04(a)/)
