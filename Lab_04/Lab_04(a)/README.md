@@ -1,4 +1,4 @@
-## _Lab-04 (Algorithms)_
+## _Lab-04(a) - Sorting Algorithms_
 
 ### Task-01
 
