@@ -19,3 +19,5 @@ _This repository contains the solution sets of all the assignments of __Data Str
 ## _Lab-04 (Algorithms)_ 
 - ### Lab_04(a) - Sorting Algorithms
   - Navigate to Directory: [Click here to view tasks directory](./Lab_04/Lab_04(a)/)
+- ### Lab_04(b) - Searching Algorithms
+  - Navigate to Directory: [Click here to view tasks directory](./Lab_04/Lab_04(b)/)
