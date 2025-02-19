@@ -17,7 +17,16 @@ _This repository contains the solution sets of all the assignments of __Data Str
 - ### Lab_03(b) - Doubly Linked List
     - Navigate to Directory: [Click here to view tasks directory](./Lab_03/Lab_03(b)/)
 ## _Lab-04 (Algorithms)_ 
-- ### Lab_04(a) - Sorting Algorithms
+- ### Lab_04(a) - ElementarySorting Algorithms
   - Navigate to Directory: [Click here to view tasks directory](./Lab_04/Lab_04(a)/)
 - ### Lab_04(b) - Searching Algorithms
   - Navigate to Directory: [Click here to view tasks directory](./Lab_04/Lab_04(b)/)
+
+## _Lab-05 (Recursions & Backtracking)_
+- Navigate to Directory: [Click here to view tasks directory](./Lab_05/)
+
+## _Lab-06 (Stacks & Queues)_
+- Navigate to Directory: [Click here to view tasks directory](./Lab_06/)
+
+## _Lab-07 (Advance Sorting Algorithms)_
+- Navigate to Directory: [Click here to view tasks directory](./Lab_07/)
